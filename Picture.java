@@ -6,15 +6,23 @@
  *
  * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
- * @version 2016.02.29
+ * @author  Nicole Burke
+ * @version 2022.31.01
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
-    private Triangle roof;
-    private Circle sun;
+    private Circle leftEar;
+    private Circle rightEar;
+    private Circle leftEye;
+    private Circle rightEye;
+    private Circle leftPupil;
+    private Circle rightPupil;
+    private Circle lEyeShine;
+    private Circle rEyeShine;
+    private Square lEyelid;
+    private Square rEyelid;
+    private Triangle head;
+    private Person nose;
     private boolean drawn;
 
     /**
@@ -22,10 +30,18 @@ public class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
-        roof = new Triangle();  
-        sun = new Circle();
+        leftEar = new Circle();
+        rightEar = new Circle();
+        leftEye = new Circle();
+        rightEye = new Circle();
+        leftPupil = new Circle();
+        rightPupil = new Circle();
+        lEyeShine = new Circle();
+        rEyeShine = new Circle();
+        lEyelid = new Square();
+        rEyelid = new Square();  
+        head = new Triangle();
+        nose = new Person();
         drawn = false;
     }
 
@@ -35,27 +51,77 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.makeVisible();
+            leftEar.changeColor("black");
+            leftEar.moveHorizontal(-80);
+            leftEar.moveVertical(-60);
+            leftEar.changeSize(100);
+            leftEar.makeVisible();
             
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
-    
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
-    
-            sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
-            sun.makeVisible();
+            rightEar.changeColor("black");
+            rightEar.moveHorizontal(20);
+            rightEar.moveVertical(-60);
+            rightEar.changeSize(100);
+            rightEar.makeVisible();
+            
+            head.changeColor("black");
+            head.changeSize(-150,125);
+            head.moveHorizontal(40);
+            head.moveVertical(100);
+            head.makeVisible();
+            
+            nose.changeColor("black");
+            nose.changeSize(-50,100);
+            nose.moveHorizontal(-29);
+            nose.moveVertical(41);
+            nose.makeVisible();
+            
+            leftEye.changeColor("yellow");
+            leftEye.moveHorizontal(-15);
+            leftEye.moveVertical(40);
+            leftEye.changeSize(35);
+            leftEye.makeVisible();
+            
+            rightEye.changeColor("yellow");
+            rightEye.moveHorizontal(20);
+            rightEye.moveVertical(40);
+            rightEye.changeSize(35);
+            rightEye.makeVisible();
+            
+            leftPupil.changeColor("red");
+            leftPupil.moveHorizontal(-10);
+            leftPupil.moveVertical(43);
+            leftPupil.changeSize(25);
+            leftPupil.makeVisible();
+            
+            rightPupil.changeColor("red");
+            rightPupil.moveHorizontal(25);
+            rightPupil.moveVertical(43);
+            rightPupil.changeSize(25);
+            rightPupil.makeVisible();
+            
+            lEyeShine.changeColor("magenta");
+            lEyeShine.moveHorizontal(6);
+            lEyeShine.moveVertical(55);
+            lEyeShine.changeSize(10);
+            lEyeShine.makeVisible();
+            
+            rEyeShine.changeColor("magenta");
+            rEyeShine.moveHorizontal(40);
+            rEyeShine.moveVertical(55);
+            rEyeShine.changeSize(10);
+            rEyeShine.makeVisible();
+            
+            lEyelid.changeColor("black");
+            lEyelid.moveHorizontal(-95);
+            lEyelid.moveVertical(-15);
+            lEyelid.changeSize(45);
+            lEyelid.makeVisible();
+            
+            rEyelid.changeColor("black");
+            rEyelid.moveHorizontal(-68);
+            rEyelid.moveVertical(-15);
+            rEyelid.changeSize(45);
+            rEyelid.makeVisible();
             drawn = true;
         }
     }
@@ -65,10 +131,18 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
-        sun.changeColor("black");
+        leftEar.changeColor("black");
+        rightEar.changeColor("black");
+        head.changeColor("black");
+        nose.changeColor("black");
+        leftEye.changeColor("white");
+        rightEye.changeColor("white");
+        leftPupil.changeColor("black");
+        rightPupil.changeColor("black");
+        lEyeShine.changeColor("white");
+        rEyeShine.changeColor("white");
+        lEyelid.changeColor("black");
+        rEyelid.changeColor("black");
     }
 
     /**
@@ -76,9 +150,17 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
-        sun.changeColor("yellow");
+        leftEar.changeColor("black");
+        rightEar.changeColor("black");
+        head.changeColor("black");
+        nose.changeColor("black");
+        leftEye.changeColor("yellow");
+        rightEye.changeColor("yellow");
+        leftPupil.changeColor("red");
+        rightPupil.changeColor("red");
+        lEyeShine.changeColor("magenta");
+        rEyeShine.changeColor("magenta");
+        lEyelid.changeColor("black");
+        rEyelid.changeColor("black");
     }
 }
